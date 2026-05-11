@@ -1,6 +1,6 @@
 import type { Job } from "./job.types";
 
-const jobs: Job[] = [];
+const jobs: Job[] = []; // TODO: replace with DB / queue service
 
 export function addJob(job: Job) {
   jobs.push(job);

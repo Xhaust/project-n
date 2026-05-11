@@ -12,7 +12,7 @@ async function processJob(job: Job) {
 
   updateJob(job.id, {status: "PROCESSING"});
 
-  await sleep(2000);
+  await sleep(2000); // NOTE: simulates workload
 
   updateJob(job.id, {status: "COMPLETED"});
 

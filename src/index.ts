@@ -1,5 +1,5 @@
 import server from "./api/server";
-import "./worker/worker"
+import "./worker/worker" // NOTE: worker runs in same process (dev only)
 
 const HOST = "localhost";
 const PORT = 3000;

@@ -1,4 +1,5 @@
 import server from "./api/server";
+import "./worker/worker"
 
 const HOST = "localhost";
 const PORT = 3000;

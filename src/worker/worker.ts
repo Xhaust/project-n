@@ -1,11 +1,7 @@
 import type { Job } from "@/jobs/job.types";
 import { getJobs, updateJob } from "@/jobs/job.store";
+import { sleep } from "@/utils/sleep"
 
-function sleep (ms: number) {
-  return new Promise ((resolve) => {
-    setTimeout(resolve, ms);
-  })
-}
 
 async function processJob(job: Job) {
   console.log(`Processing job: ${job.id}`);

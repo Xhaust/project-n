@@ -1,6 +1,6 @@
-import type { Job } from "@/jobs/job.types";
-import { getJobs, updateJob } from "@/jobs/job.store";
-import { sleep } from "@/utils/sleep"
+import type { Job } from "../jobs/job.types";
+import { getJobs, updateJob } from "../jobs/job.store";
+import { sleep } from "../utils/sleep";
 
 
 async function processJob(job: Job) {

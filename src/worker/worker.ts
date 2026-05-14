@@ -1,5 +1,5 @@
-import type { Job } from "../jobs/job.types";
-import { getJobs, updateJob } from "../jobs/job.store";
+import type { Job } from "@/jobs/job.types";
+import { getJobs, updateJob } from "@/jobs/job.store";
 
 function sleep (ms: number) {
   return new Promise ((resolve) => {

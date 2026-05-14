@@ -1,6 +1,6 @@
 import express from "express";
-import type { Job } from "../jobs/job.types";
-import { addJob } from "../jobs/job.store";
+import type { Job } from "@/jobs/job.types";
+import { addJob } from "@/jobs/job.store";
 
 const server = express();
 

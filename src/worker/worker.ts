@@ -1,14 +1,20 @@
 import type { Job } from "../jobs/job.types";
 import { getJobs, updateJob } from "../jobs/job.store";
-import { sleep } from "../utils/sleep";
-
+import { processEcho } from "../processors/echo.processor"
 
 async function processJob(job: Job) {
   console.log(`Processing job: ${job.id}`);
 
   updateJob(job.id, {status: "PROCESSING"});
 
-  await sleep(2000); // NOTE: simulates workload
+  switch (job.type) {
+    case "test.echo" :
+      await processEcho(job);
+      break;
+
+    default:
+      throw new Error(`Unknown job type: ${job.type}`)
+  }
 
   updateJob(job.id, {status: "COMPLETED"});
 
